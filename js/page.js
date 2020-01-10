@@ -38,7 +38,7 @@ window.onload=function(){
   $(".defaultTabParent").css("background",panelBG);
   $(".tabPanel").css("color","black");
   $(".defaultTabParent .tabPanel").css("color",panelFG);
-
+  $("#curDate").html(new Date().toLocaleDateString())
   $(".tabPanel").click(function(){
     $(".panelFromTab").hide();
     let self = $(this);

@@ -95,9 +95,10 @@ i{
   margin-right: 10px;
 }
 .edu-logo{
+  margin: 10px;
   height: auto;
   width: auto;
-  max-width: 64px;
+  max-width: 96px;
 }
 #edu,.card{
   display: inline-block;
@@ -136,4 +137,9 @@ i{
 }
 .h-20{
   height: 20px;
+}
+#curDate{
+  font-size: 0.6em;
+  color:lightGray;
+  margin-left: 10px;
 }
