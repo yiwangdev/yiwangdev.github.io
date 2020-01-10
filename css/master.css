@@ -36,7 +36,8 @@
 }
 .nameTitle1 {
   font-family: 'Quicksand-Medium';
-  font-size: 1.4em;
+  font-size: 1.6em;
+  font-weight: bolder;
 }
 .nameTitle2 {
   font-family: 'Quicksand-Medium';
@@ -142,4 +143,8 @@ i{
   font-size: 0.6em;
   color:lightGray;
   margin-left: 10px;
+}
+.shadow {
+  -webkit-box-shadow: 4px 3px 4px 1px rgba(181,181,181,0.4);
+  box-shadow: 4px 3px 4px 1px rgba(181,181,181,0.4);
 }
