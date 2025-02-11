@@ -5,20 +5,8 @@ function getNews(){
   var date = new Date();
   var dateStr = date.getFullYear()+"-"+('0' + (date.getMonth()+1)).slice(-2)+"-"+('0' + date.getDate()).slice(-2);
   console.log(dateStr)
-  var url = 'https://newsapi.org/v2/top-headlines?' +
-          'q=tech&' +
-          'from='+dateStr+'&' +
-          'sortBy=popularity&' +
-          'apiKey=04308c459b8f45f3bc48bf1d1fc7cbeb';
-  console.log(url);
-  var req = new Request(url);
- fetch(req,{method: "GET",
-            mode:"cors",
-  headers: {
-    "Accept": "application/json"
-  }
-})
- .then(function(response){
+  fetch("https://gnews.io/api/v4/top-headlines?category=technology&apikey=458547479e862abdd1a22d3575225c60")
+    .then(function(response){
    console.dir(response);
    return response.json();
  })
