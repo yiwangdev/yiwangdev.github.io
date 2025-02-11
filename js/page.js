@@ -7,7 +7,7 @@ function getNews(){
   console.log(dateStr)
   fetch("https://gnews.io/api/v4/top-headlines?category=technology&apikey=458547479e862abdd1a22d3575225c60")
    .then(response => response.json())
-  .then(data => console.log("t:"+data))
+  .then(data => populateNews(data))
   .catch(error => console.error(error));
 
 }
@@ -17,7 +17,7 @@ function populateNews(news)
     let mediaBlock = `
     <div class="media" data-url="`+news[i].url+`">
       <a class="pull-left" href="#">
-        <img class="media-object" src="`+news[i].urlToImage+`">
+        <img class="media-object" src="`+news[i].image+`">
       </a>
       <div class="media-body">
         <p class="media-heading">`+news[i].title+`</p>
