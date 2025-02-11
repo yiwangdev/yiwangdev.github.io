@@ -6,11 +6,9 @@ function getNews(){
   var dateStr = date.getFullYear()+"-"+('0' + (date.getMonth()+1)).slice(-2)+"-"+('0' + date.getDate()).slice(-2);
   console.log(dateStr)
   fetch("https://gnews.io/api/v4/top-headlines?category=technology&apikey=458547479e862abdd1a22d3575225c60")
-    .then(function(response){
-   console.dir(response);
-   return response.json();
- })
- .then(function(json){populateNews(json.articles)});
+   .then(response => response.json())
+  .then(data => console.log(data))
+  .catch(error => console.error(error));
 
 }
 function populateNews(news)
