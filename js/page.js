@@ -2,12 +2,9 @@
 let panelBG = "#f3f3f4"
 let panelFG = "#8E9AAF"
 function getNews(){
-  var date = new Date();
-  var dateStr = date.getFullYear()+"-"+('0' + (date.getMonth()+1)).slice(-2)+"-"+('0' + date.getDate()).slice(-2);
-  console.log(dateStr)
   fetch("https://gnews.io/api/v4/top-headlines?category=technology&apikey=458547479e862abdd1a22d3575225c60")
    .then(response => response.json())
-  .then(data => populateNews(data))
+  .then(data => {populateNews(data);})
   .catch(error => console.error(error));
 
 }
