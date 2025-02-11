@@ -12,12 +12,12 @@ function getNews(){
           'apiKey=04308c459b8f45f3bc48bf1d1fc7cbeb';
   console.log(url);
   var req = new Request(url);
- fetch(req,({method: "GET",
+ fetch(req,{method: "GET",
   headers: {
     "Upgrade-Insecure-Requests": "1",
     "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/97.0.4692.99 Safari/537.36"
   }
-}))
+})
  .then(function(response){
    console.dir(response);
    return response.json();
