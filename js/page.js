@@ -10,6 +10,7 @@ function getNews(){
           'from='+dateStr+'&' +
           'sortBy=popularity&' +
           'apiKey=04308c459b8f45f3bc48bf1d1fc7cbeb';
+  console.log(url);
   var req = new Request(url);
  fetch(req)
  .then(function(response){return response.json()})
