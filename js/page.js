@@ -13,6 +13,7 @@ function getNews(){
 }
 function populateNews(news)
 {
+  console.log("fetched "+news.length)
   for (var i=0;i<news.length;i++){
     let mediaBlock = `
     <div class="media" data-url="`+news[i].url+`">
