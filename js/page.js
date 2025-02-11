@@ -4,7 +4,7 @@ let panelFG = "#8E9AAF"
 function getNews(){
   fetch("https://gnews.io/api/v4/top-headlines?category=technology&apikey=458547479e862abdd1a22d3575225c60")
    .then(response => response.json())
-  .then(data => {console.log(data);populateNews(data);})
+  .then(data => {populateNews(data.articles);})
   .catch(error => console.error(error));
 
 }
