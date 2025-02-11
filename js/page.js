@@ -13,7 +13,10 @@ function getNews(){
   console.log(url);
   var req = new Request(url);
  fetch(req)
- .then(function(response){return response.json()})
+ .then(function(response){
+   console.dir(response);
+   return response.json();
+ })
  .then(function(json){populateNews(json.articles)});
 
 }
