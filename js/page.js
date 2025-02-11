@@ -5,7 +5,7 @@ function getNews(){
   var date = new Date();
   var dateStr = date.getFullYear()+"-"+('0' + (date.getMonth()+1)).slice(-2)+"-"+('0' + date.getDate()).slice(-2);
   console.log(dateStr)
-  var url = 'https://newsapi.org/v2/everything?' +
+  var url = 'https://newsapi.org/v2/top-headlines?' +
           'q=tech&' +
           'from='+dateStr+'&' +
           'sortBy=popularity&' +
